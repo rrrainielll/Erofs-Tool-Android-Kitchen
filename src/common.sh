@@ -100,6 +100,9 @@ check_dependencies() {
             if [[ ! " ${missing_pkg[@]} " =~ " liblz4-dev " ]]; then
                 missing_pkg+=("liblz4-dev")
             fi
+            if [[ ! " ${missing_pkg[@]} " =~ " zlib1g-dev " ]]; then
+                missing_pkg+=("zlib1g-dev")
+            fi
         fi
 
         # Show found dependencies only when some are missing
